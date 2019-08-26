@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- MI test scene from Eric Veach's thesis - modeled
+     after a file by Steve Marschner (CS667)
+-->
+
+<scene version="0.5.0">
+	<integrator type="path">
+		<integer name="maxDepth" value="50"/>
+		<boolean name="strictNormals" value="true"/>
+	</integrator>
+
+	<emitter type="envmap">
+		<string name="filename" value="ennis.hdr"/>
+	</emitter>
+
+	<shape type="obj">
+		<string name="filename" value="teapot.obj"/>
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0.5, 0.5, 0.5"/>
+		</bsdf>
+	</shape>
+
+	<sensor type="perspective">
+
+		<float name="fov" value="40"/>
+		<string name="fovAxis" value="y"/>
+		<transform name="toWorld">
+
+			<lookat target="-42.5467, 133.149, -201.496" origin="-42.7181, 133.526, -202.406" up="0, 1, 0"/>
+		</transform>
+
+		<sampler type="independent">
+			<integer name="sampleCount" value="100"/>
+		</sampler>
+
+		<film type="ldrfilm">
+			<boolean name="banner" value="false"/>
+			<float name="exposure" value="0"/>
+			<float name="gamma" value="-1"/>
+			<integer name="height" value="768"/>
+			<string name="pixelFormat" value="rgb"/>
+			<string name="tonemapMethod" value="gamma"/>
+			<integer name="width" value="1024"/>
+
+			<rfilter type="box"/>
+		</film>
+	</sensor>
+</scene>
