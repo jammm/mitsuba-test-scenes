@@ -5,7 +5,7 @@
 
 <scene version="0.5.0">
 	<integrator type="path">
-		<integer name="maxDepth" value="50"/>
+		<integer name="maxDepth" value="10"/>
 		<boolean name="strictNormals" value="true"/>
 	</integrator>
 
@@ -13,7 +13,7 @@
 		<transform name="toWorld">
 			<rotate y="1" angle="-90"/>
 		</transform>
-		<string name="filename" value="ennis.hdr"/>
+		<string name="filename" value="ennis.exr"/>
 	</emitter>
 
 	<shape type="obj">
@@ -32,10 +32,10 @@
 		</transform>
 
 		<sampler type="independent">
-			<integer name="sampleCount" value="100"/>
+			<integer name="sampleCount" value="50000"/>
 		</sampler>
 
-		<film type="ldrfilm">
+		<film type="hdrfilm">
 			<boolean name="banner" value="false"/>
 			<float name="exposure" value="0"/>
 			<float name="gamma" value="-1"/>
@@ -43,6 +43,7 @@
 			<string name="pixelFormat" value="rgb"/>
 			<string name="tonemapMethod" value="gamma"/>
 			<integer name="width" value="1024"/>
+			<string name="fileFormat" value="pfm"/>
 
 			<rfilter type="box"/>
 		</film>
