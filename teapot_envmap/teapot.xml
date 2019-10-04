@@ -5,8 +5,8 @@
 
 <scene version="0.5.0">
 	<integrator type="path">
-		<integer name="maxDepth" value="10"/>
-		<boolean name="strictNormals" value="true"/>
+		<integer name="maxDepth" value="2"/>
+		<boolean name="strictNormals" value="false"/>
 	</integrator>
 
 	<emitter type="envmap">
@@ -18,8 +18,9 @@
 
 	<shape type="obj">
 		<string name="filename" value="teapot.obj"/>
+		<boolean name="faceNormals" value="false"/>
 		<bsdf type="diffuse">
-			<rgb name="reflectance" value="0.5, 0.5, 0.5"/>
+			<rgb name="reflectance" value="1.0, 1.0, 1.0"/>
 		</bsdf>
 	</shape>
 
