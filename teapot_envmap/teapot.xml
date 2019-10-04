@@ -19,17 +19,18 @@
 	<shape type="obj">
 		<string name="filename" value="teapot.obj"/>
 		<boolean name="faceNormals" value="false"/>
+
 		<bsdf type="diffuse">
 			<rgb name="reflectance" value="1.0, 1.0, 1.0"/>
 		</bsdf>
 	</shape>
 
 	<sensor type="perspective">
-
 		<float name="fov" value="40"/>
 		<string name="fovAxis" value="y"/>
 		<transform name="toWorld">
-			<lookat target="0, 6.25, 0" origin="10.0, 13.750, 17.5" up="0, 1, 0"/>
+			<lookat target="10.637, 14.2278, 18.6148" origin="11.102, 14.5765, 19.4285" up="0 1 0"/>
+
 		</transform>
 
 		<sampler type="independent">
